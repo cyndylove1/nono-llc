@@ -1,65 +1,101 @@
+import React from "react";
 import Image from "next/image";
+import { FaArrowRight, FaShip } from "react-icons/fa";
+import Button from "./components/button";
+import motor from "@/public/assets/Gemini_Generated_Image_48tb4x48tb4x48tb.png";
+import Stats from "./components/stats";
+import WhatWeDo from "./components/whatWeDo";
+import WhoWeAre from "./components/WhoWeAre";
+import Services from "./components/services";
+import { ArrowRight } from "lucide-react";
+import { HowItWorks } from "./components/howItWorks";
+import Testimonials from "./components/testimonial";
+import Faqs from "./components/faq";
+import Cta from "./components/cta";
+import Link from "next/link";
+// ... (imports remain the same)
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <main className="min-h-screen bg-white mt-10">
+        {/* Removed overflow-hidden from the section to let the glow bleed out naturally */}
+        <section className="relative px-6 pt-16 lg:px-12 lg:pt-24">
+          {/* --- THE RIGHT SIDE GLOW --- */}
+          {/* We place it here, relative to the section, so it doesn't get cut off */}
+          <div className="absolute top-0 right-0 md:right-[10%] h-[400px] w-[400px] bg-purple-50/80 rounded-full blur-[100px] pointer-events-none -z-10 animate-pulse" />
+
+          <div className="relative mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-12 items-center">
+              <div className="relative md:col-span-12 flex flex-col items-center text-center z-10">
+                {/* Content Block */}
+                <div className="mb-8 flex items-center gap-2 rounded-full bg-purple-100 px-4 py-1.5 text-[12px] font-semibold text-purple-800 shadow-inner">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  </span>
+                  Connecting Supply Chains Across Oceans
+                </div>
+                <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
+                  Unlocking Global Markets with{" "}
+                  <br className="hidden md:inline" />
+                  <span className="text-purple-900 italic leading-[5rem]">
+                    Predictable Supply Chains
+                  </span>
+                </h2>
+
+                <p className="mb-12 text-base md:text-md text-gray-600 max-w-2xl leading-relaxed">
+                  We simplify logistics for businesses across Africa and the
+                  Americas. By connecting you directly with trusted
+                  manufacturers in China and India, we ensure seamless sourcing,
+                  predictable delivery, and stress-free customs.
+                </p>
+
+                {/* Buttons and the rest of your code... */}
+                <div className="mb-16 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                  <Link href="/services">
+                    {" "}
+                    <Button
+                      variant="primary"
+                      className="gap-2.5 w-full sm:w-auto"
+                    >
+                      <span>Explore Services</span>
+                      <ArrowRight size={14} />
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="secondary" className="w-full sm:w-auto">
+                      <span>Contact Us</span>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Image Container Glow (Keeping this as is) */}
+            <div className="group relative mt-12 w-full max-w-[1400px] mx-auto z-10 px-20">
+              <div className="absolute -inset-4 rounded-[40px] blur-3xl opacity-100 pointer-events-none" />
+              <div className="relative aspect-[16/6] w-full overflow-hidden h-[400px] rounded-3xl border border-gray-100 shadow-inner bg-gray-50">
+                <Image
+                  src="/assets/ship1.PNG"
+                  width={250}
+                  height={200}
+                  alt="hero image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+      <Stats />
+      <WhatWeDo />
+      <WhoWeAre />
+      <Services />
+      <HowItWorks />
+      <Testimonials />
+      <Faqs />
+      <Cta />
+    </>
   );
 }
