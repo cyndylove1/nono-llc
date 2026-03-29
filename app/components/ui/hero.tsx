@@ -37,7 +37,7 @@ export default function Hero() {
                   </span>
                 </h2>
 
-                <p className="mb-12 text-base md:text-md text-gray-600 max-w-2xl pt-6 leading-relaxed">
+                <p className="mb-12 text-sm md:text-md text-gray-600 max-w-2xl pt-6 leading-relaxed">
                   We simplify logistics for businesses across Africa and the
                   Americas. By connecting you directly with trusted
                   manufacturers in China and India, we ensure seamless sourcing,

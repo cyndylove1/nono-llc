@@ -62,7 +62,7 @@ export default function About ()  {
                   About Us
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight max-w-xl">
+              <h2 className="text-2xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight max-w-xl">
                 Architecting Seamless&nbsp;
                 <span className="text-purple-900 italic">Global Trade.</span>
               </h2>
