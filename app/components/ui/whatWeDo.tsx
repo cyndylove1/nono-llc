@@ -1,11 +1,11 @@
 "use client";
-import { services } from "./constant/constant";
+import { services } from "../constant/constant";
 import { motion } from "framer-motion";
 
-const WhatWeDo = () => {
+export default function WhatWeDo() {
   return (
-    <section className="bg-white py-20 lg:py-32 mx-14">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-white py-20 lg:py-32 md:mx-6 mx-4">
+      <div className="mx-auto max-w-7xl">
         {/* Header Block */}
         <div className="mb-20">
           <motion.div
@@ -15,11 +15,11 @@ const WhatWeDo = () => {
           >
             <span className="w-12 h-px bg-slate-900"></span>
             <span className="text-sm font-bold uppercase tracking-widest text-purple-700">
-              End-to-End Trade & Logistics
+              What We Do
             </span>
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            Reliable Solutions for <br />
+          <h2 className="text-2xl md:text-5xl font-black text-slate-900 tracking-tight max-w-xl">
+            Reliable Solutions for&nbsp;
             <span className="text-purple-900 italic">Global Supply Chains</span>
           </h2>
           <p className="mt-6 text-gray-600 max-w-2xl text-md leading-relaxed">
@@ -63,6 +63,4 @@ const WhatWeDo = () => {
       </div>
     </section>
   );
-};
-
-export default WhatWeDo;
+}

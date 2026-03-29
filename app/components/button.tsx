@@ -1,8 +1,6 @@
-// src/components/ui/Button.tsx
-import React from "react";
 import { FaCircleNotch } from "react-icons/fa";
 
-type ButtonVariant = "primary" | "secondary" ;
+type ButtonVariant = "primary" | "secondary";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
@@ -18,13 +16,10 @@ const Button = ({
   disabled = false,
   variant = "primary",
 }: ButtonProps) => {
-  // Style configurations
   const variants: Record<ButtonVariant, string> = {
     primary:
       "hover:bg-purple-700 text-white bg-purple-900 shadow-purple-500/20",
-    secondary:
-      "border-[1px] border-purple-700 bg-[#F7F8FA] text-gray-900 ",
-    // outline: "border border-gray-200 text-gray-600 hover:bg-gray-50",
+    secondary: "border-[1px] border-purple-700 bg-[#F7F8FA] text-gray-900 ",
   };
 
   const baseStyles =

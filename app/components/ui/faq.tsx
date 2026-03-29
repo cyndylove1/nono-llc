@@ -3,52 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Plus } from "lucide-react";
-import Button from "./button";
+import Button from "../button";
 import Link from "next/link";
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const shippingFaqs: FAQItem[] = [
-  {
-    question: "How do I track my international shipment in real-time?",
-    answer:
-      "Once your cargo is dispatched, you will receive a unique tracking ID compatible with our global portal. This provides live updates on vessel location for sea freight and flight milestones for air cargo, ensuring full visibility from port to port.",
-  },
-  {
-    question: "What is the estimated transit time for sea vs. air freight?",
-    answer:
-      "Air freight typically takes 5–10 business days for global delivery. Sea freight transit times vary by route: China to Africa generally takes 30–45 days, while India to the Americas ranges between 25–35 days, depending on transshipment hubs.",
-  },
-  {
-    question: "Are my goods insured during the shipping process?",
-    answer:
-      "We offer comprehensive Marine Cargo Insurance that covers loss or damage from external causes during transit. We highly recommend this for high-value electronics and fragile building materials to mitigate risks during handling.",
-  },
-  {
-    question: "Do you provide 'Door-to-Door' delivery in Africa?",
-    answer:
-      "Yes. Our logistics network includes robust last-mile delivery services across major African hubs. We handle the transition from the arrival port to our local warehouses and finally to your specified commercial or residential address.",
-  },
-  {
-    question: "Who handles the customs documentation and duties?",
-    answer:
-      "Our specialized clearing agents manage all paperwork, including Bill of Lading, Form M, and commercial invoices. We calculate estimated duties upfront to ensure your shipment complies with local regulations and avoids costly port delays.",
-  },
-  {
-    question: "What happens if my shipment is delayed at the port?",
-    answer:
-      "While we strive for punctuality, port congestion can occur. In such cases, our local teams coordinate directly with port authorities to prioritize your containers and provide you with daily status reports until clearance is secured.",
-  },
-];
+import { shippingFaqs } from "../constant/constant";
 
 export default function ShippingFaqs() {
   const [openIndex, setOpenIndex] = useState<number | null>();
 
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 md:px-6 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-20">
@@ -62,8 +25,8 @@ export default function ShippingFaqs() {
               FAQ
             </span>
           </motion.div>
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">
-            Logistics & Delivery <br />
+          <h2 className="text-2xl md:text-6xl font-black text-slate-900 tracking-tight">
+            Logistics & Delivery&nbsp;
             <span className="text-purple-900 italic">Clarified.</span>
           </h2>
         </div>
@@ -77,7 +40,7 @@ export default function ShippingFaqs() {
             return (
               <div
                 key={index}
-                className={`transition-all duration-500 rounded-3xl ${isOpen ? "bg-slate-50 p-8" : "bg-transparent p-8 border-b border-slate-100 rounded-none"}`}
+                className={`transition-all duration-500 rounded-3xl ${isOpen ? "bg-slate-50 md:p-8 p-4" : "bg-transparent md:p-8 p-4 border-b border-slate-100 rounded-none"}`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -91,7 +54,7 @@ export default function ShippingFaqs() {
 
                   <div className="flex-1">
                     <h3
-                      className={`text-xl md:text-2xl font-bold tracking-tight transition-colors ${isOpen ? "text-slate-900" : "text-slate-600 group-hover:text-slate-900"}`}
+                      className={`text-md md:text-2xl font-bold tracking-tight transition-colors ${isOpen ? "text-slate-900" : "text-slate-600 group-hover:text-slate-900"}`}
                     >
                       {faq.question}
                     </h3>
@@ -104,7 +67,7 @@ export default function ShippingFaqs() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.4, ease: "circOut" }}
                         >
-                          <p className="mt-6 text-slate-500 text-lg leading-relaxed max-w-2xl">
+                          <p className="mt-6 text-slate-500 md:text-lg text-sm leading-relaxed max-w-2xl">
                             {faq.answer}
                           </p>
                         </motion.div>
@@ -113,9 +76,9 @@ export default function ShippingFaqs() {
                   </div>
 
                   <div
-                    className={`mt-1 transition-transform duration-500 ${isOpen ? "rotate-45 text-purple-700" : "text-gray-900"}`}
+                    className={`mt-1 md:text-[28px] text-[20px] transition-transform duration-500 ${isOpen ? "rotate-45 text-purple-700" : "text-gray-900"}`}
                   >
-                    <Plus size={28} />
+                    <Plus />
                   </div>
                 </button>
               </div>

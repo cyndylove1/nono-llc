@@ -1,9 +1,7 @@
 "use client";
-
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight, Home } from "lucide-react";
+import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
   label: string;
@@ -16,28 +14,28 @@ interface BannerProps {
   description: string;
   bgImage: string;
   height?: string;
-  breadcrumbs?: BreadcrumbItem[]; // New Prop
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-const Banner = ({
+export default function Banner ({
   title,
   subtitle,
   description,
   bgImage,
   height = "min-h-[600px]",
   breadcrumbs = [],
-}: BannerProps) => {
+}: BannerProps) {
   return (
     <section
       className={`relative w-full ${height} flex items-center overflow-hidden my-6 mx-auto shadow-2xl`}
     >
-      {/* 1. Background Image */}
+      {/*Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105"
         style={{ backgroundImage: `url('${bgImage}')` }}
       />
 
-      {/* 2. Black Gradient Overlays */}
+      {/* Black Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent z-10" />
 
@@ -54,7 +52,7 @@ const Banner = ({
               Home
             </Link>
             {breadcrumbs.map((crumb, idx) => (
-              <React.Fragment key={idx}>
+              <div key={idx}>
                 <ChevronRight size={14} className="text-slate-600" />
                 <Link
                   href={crumb.href}
@@ -66,7 +64,7 @@ const Banner = ({
                 >
                   {crumb.label}
                 </Link>
-              </React.Fragment>
+              </div>
             ))}
           </nav>
         )}
@@ -95,7 +93,7 @@ const Banner = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-slate-300 text-lg md:text-sm max-w-lg mb-10 leading-relaxed"
+            className="text-slate-300 text-sm max-w-lg mb-10 leading-relaxed"
           >
             {description}
           </motion.p>
@@ -104,5 +102,3 @@ const Banner = ({
     </section>
   );
 };
-
-export default Banner;

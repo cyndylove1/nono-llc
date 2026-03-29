@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/footer";
+import Footer from "./components/ui/footer";
 import Navbar from "./components/navbar";
 
 const soraSans = Sora({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${soraSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <Navbar/>
+        <Navbar />
         {children}
         <Footer />
       </body>

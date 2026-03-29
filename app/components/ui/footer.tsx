@@ -1,61 +1,22 @@
 "use client";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
+import Logo from "../logo";
+import NewsLetter from "./newsLetter";
 
-
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
+export default function Footer() {
   return (
     <footer className="bg-gray-200 pt-24 pb-12 px-6 border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Section - Integrated Design */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20 border-b border-slate-100 mb-20">
-          <div className="lg:col-span-5">
-            <h3 className="text-3xl font-black text-slate-900 tracking-tight">
-              Stay ahead of the <br />
-              <span className="text-purple-900 italic">
-                global supply chain.
-              </span>
-            </h3>
-          </div>
-          <div className="lg:col-span-7">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your business email"
-                className="flex-1 bg-slate-50 border border-slate-200 px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-700 transition-all"
-              />
-              <button className="bg-purple-900 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 group">
-                Subscribe
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </button>
-            </div>
-            <p className="mt-4 text-xs text-slate-400 flex items-center gap-2">
-              <ShieldCheck size={14} />
-              Your data is encrypted and protected under our privacy policy.
-            </p>
-          </div>
-        </div>
+        <NewsLetter />
 
         {/* Main Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
-          {/* Brand Identity */}
+          {/* logo*/}
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-2 group">
-              {/* Example placeholder logo */}
-              <div className="h-9 w-9 bg-purple-900 rounded-full flex items-center justify-center font-black text-white group-hover:bg-blue-600 transition-colors">
-                N
-              </div>
-              <span className="text-2xl font-black text-slate-900 tracking-tighter">
-                NONO-LLC
-              </span>
-            </Link>
-
+            <Logo />
             <p className="mt-6 text-slate-500 leading-relaxed max-w-sm">
               Premier logistics and sourcing partner bridging the gap between
               Asian manufacturing and African/American markets.
@@ -156,7 +117,7 @@ const Footer = () => {
               Follow Our Journey
             </h4>
             <div className="flex gap-3">
-              {[FaFacebook, FaTwitter, FaInstagram ].map((Icon, idx) => (
+              {[FaFacebook, FaTwitter, FaInstagram].map((Icon, idx) => (
                 <Link
                   key={idx}
                   href="#"
@@ -172,7 +133,7 @@ const Footer = () => {
         {/* Bottom Legal Section */}
         <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm font-medium">
-            © {currentYear} NONO-LLC. All rights reserved.
+            © 2026 NONO-LLC. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-400 font-medium">
             <Link
@@ -198,6 +159,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

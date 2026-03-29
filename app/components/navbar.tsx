@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
+import Logo from "./logo";
 
 // 1. Defining standard navigation routes
 const navLinks = [
@@ -18,26 +19,17 @@ const Navbar = () => {
   const pathname = usePathname(); // For active link styling
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-[1px] border-gray-200  px-6 py-2 ">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-[1px] border-gray-200  md:px-6 px-4 py-2 ">
       <div className="mx-auto flex items-center justify-between">
-        {/* L: The Brand Logo (Placeholder: Add your actual logo asset here) */}
-        <Link href="/" className="flex items-center gap-2 group">
-          {/* Example placeholder logo */}
-          <div className="h-9 w-9 bg-purple-900 rounded-full flex items-center justify-center font-black text-white group-hover:bg-blue-600 transition-colors">
-            N
-          </div>
-          <span className="text-2xl font-black text-slate-900 tracking-tighter">
-            NONO-LLC
-          </span>
-        </Link>
+        {/* Brand Logo */}
+        <Logo />
 
-        {/* C: The 'Pill' Style Central Navigation (Hidden on small screens) */}
+        {/*Navigation*/}
         <div className="hidden lg:flex items-center gap-1.5 bg-slate-50 p-1.5 rounded-full border border-slate-100 shadow-inner">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              // Dynamically apply active state (Brand Blue and White)
               className={`px-6 py-2 rounded-full font-semibold text-[13px] tracking-tight transition-all duration-300 ${
                 pathname === link.href
                   ? "bg-purple-900 text-white shadow-md shadow-slate-200" // Active state
@@ -49,17 +41,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* R: Get a Quote CTA & Mobile Menu Trigger */}
+        {/* button*/}
         <div className="flex items-center gap-3">
-          {/* CTA Button (Hidden on small screens) */}
           <Link
-            href="/quote"
-            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100"
+            href="/contact"
+            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-3 py-2 rounded-full font-bold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100 hidden lg:flex"
           >
             Contact Us
             <ArrowRight size={18} />
           </Link>
-          
 
           {/* Mobile Menu Button */}
           <button
@@ -78,9 +68,6 @@ const Navbar = () => {
         }`}
       >
         <div className="p-8 space-y-6">
-          <h4 className="text-[13px] font-black uppercase text-slate-400 tracking-widest mb-4">
-            Navigation
-          </h4>
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -96,7 +83,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Mobile CTA (Brand Blue) */}
+          {/*button*/}
           <Link
             href="/quote"
             className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100"

@@ -1,18 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { stats } from "../constant/constant";
 
-// --- START: ANIMATED STAT LOGIC (INTEGRATED) ---
 interface AnimatedStatProps {
-  // Pass only the NUMBER part here (e.g., "250")
   numberValue: string;
   duration?: number;
 }
 
-// Minimalist counter that only handles numeric progression
 const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
   numberValue,
-  duration = 1500, // Slightly longer default for better visualization
+  duration = 1500,
 }) => {
   const [currentValue, setCurrentValue] = useState(0);
   const ref = useRef<HTMLSpanElement | null>(null);
@@ -26,7 +24,6 @@ const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
 
-          // Convert the number string (e.g. "250") to a number (e.g., 250)
           const targetValue = parseFloat(numberValue.replace(/[^0-9.]/g, ""));
           if (isNaN(targetValue)) return; // Safety check
 
@@ -36,8 +33,6 @@ const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
             if (startTime === 0) startTime = time;
             const progress = Math.min((time - startTime) / duration, 1);
 
-            // Apply easing (easeOutExpo) for a more professional feel
-            // easeOutExpo function: 1 - Math.pow(2, -10 * progress)
             const easing = 1 - Math.pow(2, -10 * progress);
             const current = Math.floor(easing * targetValue);
 
@@ -46,7 +41,6 @@ const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
             if (progress < 1) {
               requestAnimationFrame(animate);
             } else {
-              // Ensure we hit the precise target at the very end
               setCurrentValue(targetValue);
             }
           };
@@ -54,7 +48,7 @@ const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
           requestAnimationFrame(animate);
         }
       },
-      // Trigger when 40% of the element is visible
+
       { threshold: 0.4, rootMargin: "0px 0px -50px 0px" },
     );
 
@@ -68,36 +62,12 @@ const AnimatedStatSpan: React.FC<AnimatedStatProps> = ({
       ref={ref}
       className="inline-block transition-transform duration-300 group-hover:scale-105"
     >
-      {currentValue.toLocaleString()} {/* Adds commas (e.g., 1,200) */}
+      {currentValue.toLocaleString()}
     </span>
   );
 };
-// --- END: ANIMATED STAT LOGIC ---
 
-const stats = [
-  {
-    number: "250",
-    label: "Global Shipments Delivered",
-    suffix: "+",
-  },
-  {
-    number: "50",
-    label: "Partnerships Across Africa",
-    suffix: "+",
-  },
-  {
-    number: "75",
-    label: "Verified Global Manufacturers",
-    suffix: "+",
-  },
-  {
-    number: "35",
-    label: "Strategic Corporate Clients",
-    suffix: "+",
-  },
-];
-
-const Stats: React.FC = () => {
+export default function Stats  () {
   return (
     <section className="py-16 md:py-10 border-t-[1px] border-gray-200 border-b mt-24 mx-14">
       <div className="mx-auto max-w-7xl px-6">
@@ -115,12 +85,12 @@ const Stats: React.FC = () => {
               {/* Stats Content - INTEGRATION HERE */}
               <div className="flex items-baseline justify-center mb-3 min-h-[50px]">
                 {/* 1. USE THE NEW ANIMATED COMPONENT (Passing only numberValue) */}
-                <span className="text-6xl md:text-4xl font-bold text-slate-900 tracking-tighter">
+                <span className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tighter">
                   <AnimatedStatSpan numberValue={stat.number} />
                 </span>
 
                 {/* 2. Suffix rendering (Keep separate JSX as before) */}
-                <span className="text-4xl md:text-3xl font-bold text-purple-900 ml-1">
+                <span className="text-xl md:text-3xl font-bold text-purple-900 ml-1">
                   {stat.suffix}
                 </span>
               </div>
@@ -140,4 +110,4 @@ const Stats: React.FC = () => {
   );
 };
 
-export default Stats;
+
