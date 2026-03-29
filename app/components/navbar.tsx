@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-3 py-2 rounded-full font-bold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100 hidden lg:flex"
+            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white p-3 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100 hidden lg:flex"
           >
             Contact Us
             <ArrowRight size={18} />
@@ -85,8 +85,8 @@ const Navbar = () => {
 
           {/*button*/}
           <Link
-            href="/quote"
-            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-8 py-4 rounded-full font-bold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100"
+            href="/contact"
+            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100"
           >
             Contact Us
             <ArrowRight size={18} />
