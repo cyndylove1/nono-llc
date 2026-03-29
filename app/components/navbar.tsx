@@ -72,11 +72,11 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              onClick={() => setMobileMenuOpen(false)} // Close menu on click
-              className={`block text-xl font-semibold ${
+              onClick={() => setMobileMenuOpen(false)} 
+              className={`block text-md font-semibold ${
                 pathname === link.href
-                  ? "text-purple-900 tracking-tighter" // Active state
-                  : "text-gray-900 hover:text-purple-700" // Inactive state
+                  ? "text-purple-900 tracking-tighter" 
+                  : "text-gray-900 hover:text-purple-700"
               }`}
             >
               {link.label}

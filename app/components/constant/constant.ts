@@ -1,8 +1,7 @@
 import { FaShip, FaPlaneDeparture, FaTruckLoading } from "react-icons/fa";
 
 //what We Do
-
-export const services = [
+export const whatWeDo = [
   {
     title: "Ocean Freight Forwarding",
     description:
@@ -201,5 +200,44 @@ export const testimonials: Testimonial[] = [
      desc: "From the factory floor to your warehouse door. Our precision-engineered tracking ensures you have full control over your supply chain milestones.",
      image: "/assets/end.png",
      reverse: true,
+   },
+];
+ 
+interface ServiceItem {
+  title: string;
+  desc: string;
+  image: string;
+}
+
+ export const services: ServiceItem[] = [
+   {
+     title: "Warehousing Services",
+     desc: "We have expansive, state-of-the-art facilities designed to provide comprehensive solutions including distribution, secure storage, and advanced inventory management.",
+     image: "/assets/warehouse.jpg",
+   },
+   {
+     title: "Air Freight Services",
+     desc: "We proudly partner with top airlines and globally recognized freight forwarders to deliver seamless, efficient, and highly reliable air freight solutions.",
+     image: "/assets/air-freight.png",
+   },
+   {
+     title: "Sea Transport Services",
+     desc: "Wherever your cargo is headed, we expertly manage the shipment process for you, ensuring efficiency and reliability while keeping your business competitive.",
+     image: "/assets/ship.png",
+   },
+   {
+     title: "Network & Route",
+     desc: "Our transportation strategy experts develop a comprehensive roadmap, identifying the most effective solutions and streamlining organization for optimal efficiency.",
+     image: "/assets/globe.jpg",
+   },
+   {
+     title: "Local Shipping Services",
+     desc: "We work closely with our strategic partners to provide comprehensive domestic trucking solutions, ensuring our clients receive everything they need, exactly where they need it.",
+     image: "/assets/local.jpg",
+   },
+   {
+     title: "Customs Clearance",
+     desc: "With certified logistics expertise and cutting-edge technology, we transform your supply chain while minimizing downtime to keep your operations running smoothly.",
+     image: "/assets/clearance.png",
    },
  ];

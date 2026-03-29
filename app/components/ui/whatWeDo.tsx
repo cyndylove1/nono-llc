@@ -1,5 +1,5 @@
 "use client";
-import { services } from "../constant/constant";
+import { whatWeDo } from "../constant/constant";
 import { motion } from "framer-motion";
 
 export default function WhatWeDo() {
@@ -31,7 +31,7 @@ export default function WhatWeDo() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {services.map((service, index) => {
+          {whatWeDo.map((service, index) => {
             const Icon = service.icon;
 
             return (

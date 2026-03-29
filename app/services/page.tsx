@@ -1,41 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 import Banner from "../components/banner";
 import Cta from "../components/ui/cta";
+import { services } from "../components/constant/constant";
 
-const Services = () => {
-  const services = [
-    {
-      title: "Warehousing Services",
-      desc: "We have expansive, state-of-the-art facilities designed to provide comprehensive solutions including distribution, secure storage, and advanced inventory management.",
-      image: "/assets/warehouse.jpg", //
-    },
-    {
-      title: "Air Freight Services",
-      desc: "We proudly partner with top airlines and globally recognized freight forwarders to deliver seamless, efficient, and highly reliable air freight solutions.",
-      image: "/assets/air-freight.png", //
-    },
-    {
-      title: "Sea Transport Services",
-      desc: "Wherever your cargo is headed, we expertly manage the shipment process for you, ensuring efficiency and reliability while keeping your business competitive.",
-      image: "/assets/ship.png", //
-    },
-    {
-      title: "Network & Route",
-      desc: "Our transportation strategy experts develop a comprehensive roadmap, identifying the most effective solutions and streamlining organization for optimal efficiency.",
-      image: "/assets/globe.jpg", //
-    },
-    {
-      title: "Local Shipping Services",
-      desc: "We work closely with our strategic partners to provide comprehensive domestic trucking solutions, ensuring our clients receive everything they need, exactly where they need it.",
-      image: "/assets/local.jpg", //
-    },
-    {
-      title: "Customs Clearance",
-      desc: "With certified logistics expertise and cutting-edge technology, we transform your supply chain while minimizing downtime to keep your operations running smoothly.",
-      image: "/assets/clearance.png", //
-    },
-  ];
-
+export default function Services() {
   return (
     <>
       <Banner
@@ -60,19 +28,21 @@ const Services = () => {
                 key={index}
                 className="group relative md:h-[400px] h-[300px] w-full overflow-hidden rounded-3xl shadow-lg transition-all duration-500 hover:-translate-y-2"
               >
+                {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${service.image})` }}
+                  aria-hidden="true"
                 />
 
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity group-hover:opacity-90 z-10" />
 
                 {/* Content Layer */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end text-white z-20">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-2xl font-bold">{service.title}</h3>{" "}
-                    <div className="bg-white/20 backdrop-blur-md p-2 rounded-full border border-white/30 transition-colors group-hover:bg-purple-700">
+                    <div className="bg-white/20 backdrop-blur-md p-2 rounded-full border border-white/30 transition-colors group-hover:bg-purple-700 shrink-0">
                       <ArrowUpRight size={20} />
                     </div>
                   </div>
@@ -86,9 +56,9 @@ const Services = () => {
           </div>
         </div>
       </section>
+
       <Cta />
     </>
   );
 };
 
-export default Services;
