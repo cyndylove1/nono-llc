@@ -18,8 +18,9 @@ const Button = ({
 }: ButtonProps) => {
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "hover:bg-purple-700 text-white bg-purple-900 shadow-purple-500/20",
-    secondary: "border-[1px] border-purple-700 bg-[#F7F8FA] text-gray-900 ",
+      "hover:bg-purple-700 text-white bg-purple-900 shadow-purple-500/20 cursor-pointer",
+    secondary:
+      "border-[2px] hover:bg-purple-900 hover:text-white border-purple-900 bg-[#F7F8FA] text-gray-900  cursor-pointer",
   };
 
   const baseStyles =

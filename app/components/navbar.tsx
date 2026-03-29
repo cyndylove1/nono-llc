@@ -32,8 +32,8 @@ const Navbar = () => {
               href={link.href}
               className={`px-6 py-2 rounded-full font-semibold text-[13px] tracking-tight transition-all duration-300 ${
                 pathname === link.href
-                  ? "bg-purple-900 text-white shadow-md shadow-slate-200" // Active state
-                  : "text-slate-600 hover:text-slate-900 hover:bg-white" // Inactive state
+                  ? "bg-purple-900 text-white shadow-md shadow-slate-200" 
+                  : "text-slate-600 hover:text-slate-900 hover:bg-white" 
               }`}
             >
               {link.label}
@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white p-3 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100 hidden lg:flex"
+            className="flex w-full items-center justify-center gap-2.5 bg-purple-900 text-white py-3 px-4 rounded-full font-semibold hover:bg-purple-700 transition-all shadow-xl shadow-blue-100 hidden lg:flex"
           >
             Contact Us
             <ArrowRight size={18} />

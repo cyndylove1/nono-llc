@@ -73,7 +73,7 @@ export default function Hero() {
               className="group relative mt-12 w-full mx-auto z-10"
             >
               <div className="absolute -inset-4 rounded-[40px] blur-3xl opacity-100 pointer-events-none" />
-              <div className="relative aspect-[16/6] w-full overflow-hidden h-[400px] rounded-3xl border border-gray-100 shadow-inner bg-gray-50">
+              <div className="relative aspect-[16/6] w-full overflow-hidden h-[500px] rounded-3xl border border-gray-100 shadow-inner bg-gray-50">
                 <Image
                   src="/assets/ship3.png"
                   width={1920}
