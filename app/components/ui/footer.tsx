@@ -26,15 +26,15 @@ export default function Footer() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <MapPin size={18} className="text-purple-900" />
-                <span>NONOSLLC Headquarters, New Delhi / Lagos</span>
+                <span>9110 Elaine Ct Unit 203 Laurel, MD 20708</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <Phone size={18} className="text-purple-900" />
-                <span>+91 9876-543-210</span>
+                <span>+1(301)433-3192</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <Mail size={18} className="text-purple-900" />
-                <span>logistics@nonosllc.com</span>
+                <span>nonosllc24@gmail.com</span>
               </div>
             </div>
           </div>
