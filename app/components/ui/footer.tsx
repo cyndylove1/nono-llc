@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-200 pt-24 pb-12 md:px-6 px-4 border-t border-slate-100">
       <div className="max-w-7xl mx-auto">
-        {/* Newsletter Section - Integrated Design */}
+        {/* Newsletter Section */}
         <NewsLetter />
 
         {/* Main Footer Links */}
