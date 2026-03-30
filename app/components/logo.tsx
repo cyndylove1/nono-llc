@@ -8,7 +8,7 @@ export default function Logo() {
             N
           </div>
           <span className="md:text-2xl text-lg font-black text-slate-900 tracking-tighter">
-            NONO-LLC
+            NONOSLLC
           </span>
         </Link>
       </>

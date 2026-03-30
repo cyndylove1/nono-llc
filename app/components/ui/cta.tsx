@@ -24,7 +24,7 @@ export default function Cta ()  {
         </div>
 
         {/* Top Right Content */}
-        <div className="md:text-right md:max-w-sm space-y-4">
+        <div className="md:text-right md:max-w-md space-y-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function Cta ()  {
               Service Consulting
             </h3>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              If you need any advice or information about Nono-LLC and logistics
+              If you need any advice or information about NONOSLLC and logistics
               services, Our Team members always ready to help you.
             </p>
           </motion.div>

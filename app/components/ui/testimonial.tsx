@@ -26,7 +26,7 @@ export default function Testimonials () {
               Testimonials
             </span>
           </motion.div>
-          <h2 className="text-2xl md:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl md:text-5xl font-black text-slate-900 tracking-tight max-w-xl">
             What Our Customers&nbsp;
             <span className="text-purple-900 italic">Say.</span>
           </h2>

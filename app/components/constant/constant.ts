@@ -134,7 +134,7 @@ export const testimonials: Testimonial[] = [
     role: "Construction Project Lead, Lagos",
     image: "/assets/man1.jpg", 
     content:
-      "Nono-llc made the process of sourcing quality building materials from China incredibly smooth. From consultation to delivery at the Apapa Port, everything was handled professionally.",
+      "Nonosllc made the process of sourcing quality building materials from China incredibly smooth. From consultation to delivery at the Apapa Port, everything was handled professionally.",
     rating: 5,
   },
   {
@@ -142,7 +142,7 @@ export const testimonials: Testimonial[] = [
     role: "Director, Accra Medical Supply",
     image: "/assets/man2.jpg", 
     content:
-      "Importing sensitive diagnostic equipment requires extreme precision. Nono-llc's Air Freight Solutions delivered critical tech to Ghana under tight deadlines, fully compliant and secure.",
+      "Importing sensitive diagnostic equipment requires extreme precision. Nonosllc's Air Freight Solutions delivered critical tech to Ghana under tight deadlines, fully compliant and secure.",
     rating: 5,
   },
   {
@@ -150,7 +150,7 @@ export const testimonials: Testimonial[] = [
     role: "Owner, Global Tech Traders Ltd.",
     image: "/assets/man3.jpg", 
     content:
-      "We needed a reliable partner for bulk electronics sourcing in India. Nono-llc delivered on all counts—competitively priced, on time, and with full customs handling for the Accra market.",
+      "We needed a reliable partner for bulk electronics sourcing in India. Nonosllc delivered on all counts—competitively priced, on time, and with full customs handling for the Accra market.",
     rating: 5,
   },
   {
@@ -158,7 +158,7 @@ export const testimonials: Testimonial[] = [
     role: "Sourcing Manager, Mumbai Dynamics",
     image: "/assets/man4.jpg", 
     content:
-      "Nono-llc simplified our outbound logistics to African markets significantly. Their network optimization between Mumbai and Lagos has reduced our transit costs and delivery times by 20%.",
+      "Nonosllc simplified our outbound logistics to African markets significantly. Their network optimization between Mumbai and Lagos has reduced our transit costs and delivery times by 20%.",
     rating: 5,
   },
   {
@@ -166,7 +166,7 @@ export const testimonials: Testimonial[] = [
     role: "Logistics Lead, Casablanca Textile Corp.",
     image: "/assets/man5.jpg",
     content:
-      "For raw textile sourcing in China, Nono-llc is unparalleled. Their dedicated account management keeps us informed, ensuring our manufacturing lines never face downtime. They are a crucial partner.",
+      "For raw textile sourcing in China, Nonosllc is unparalleled. Their dedicated account management keeps us informed, ensuring our manufacturing lines never face downtime. They are a crucial partner.",
     rating: 5,
   },
 ];

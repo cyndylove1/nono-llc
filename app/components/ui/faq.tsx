@@ -25,7 +25,7 @@ export default function ShippingFaqs() {
               FAQ
             </span>
           </motion.div>
-          <h2 className="text-2xl md:text-6xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl md:text-6xl font-black text-slate-900 tracking-tight max-w-xl">
             Logistics & Delivery&nbsp;
             <span className="text-purple-900 italic">Clarified.</span>
           </h2>

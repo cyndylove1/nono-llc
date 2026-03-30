@@ -69,7 +69,7 @@ export default function About ()  {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed font-medium">
-              NONO-LLC serves as the critical link in the global supply chain,
+              NONOSLLC serves as the critical link in the global supply chain,
               connecting industrial centers in Asia and India with high-growth
               markets across Africa and the Americas. We engineer end-to-end
               reliability through expert sourcing and precision freight

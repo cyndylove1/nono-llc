@@ -71,7 +71,7 @@ export default function ContactUs() {
                         Electronic Mail
                       </p>
                       <p className="md:text-xl text-lg text-gray-900 font-light">
-                        logistics@nono-llc.com
+                        logistics@nonosllc.com
                       </p>
                     </div>
                   </div>

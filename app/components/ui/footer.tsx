@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <MapPin size={18} className="text-purple-900" />
-                <span>NONO-LLC Headquarters, New Delhi / Lagos</span>
+                <span>NONOSLLC Headquarters, New Delhi / Lagos</span>
               </div>
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <Phone size={18} className="text-purple-900" />
@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-slate-600 text-sm">
                 <Mail size={18} className="text-purple-900" />
-                <span>logistics@nono-llc.com</span>
+                <span>logistics@nonosllc.com</span>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Bottom Legal Section */}
         <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm font-medium">
-            © 2026 NONO-LLC. All rights reserved.
+            © 2026 NONOSLLC. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-slate-400 font-medium">
             <Link
